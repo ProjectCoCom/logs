@@ -1,0 +1,44 @@
+productaidonnagit-98836878:~/product.ai.Donna{main}$ npm run dev:server
+
+> product-ai-donna@0.0.1 dev:server
+> nodemon src/server.ts
+
+[nodemon] 3.1.10
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: ts,json
+[nodemon] starting `ts-node src/server.ts`
+/home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/types/database/KnowledgeBaseEntities.ts:4:1 - error TS6133: 'FirestoreCollections' is declared but its value is never read.
+
+4 import { FirestoreCollections } from './SboEntities'; // Assuming FirestoreCollections might be extended or live elsewhere
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    at createTSError (/home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Object.require.extensions.<computed> [as .ts] (/home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/user/product.ai.Donna/src/database/repositories/KnowledgeBaseRepository.ts:5:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Module.m._compile (/home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Object.require.extensions.<computed> [as .ts] (/home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/user/product.ai.Donna/src/services/knowledgebase/KnowledgeBaseService.ts:3:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14) {
+  diagnosticCodes: [ 6133 ]
+}
+[nodemon] app crashed - waiting for file changes before starting...
