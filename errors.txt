@@ -8,6 +8,7 @@ productaidonnagit-98836878:~/product.ai.Donna{main}$ npm run dev:server
 [nodemon] watching path(s): *.*
 [nodemon] watching extensions: ts,json
 [nodemon] starting `ts-node src/server.ts`
+api/v1/telegram/webhook.ts loaded - contains handleTelegramUpdate function
 /home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:859
     return new TSError(diagnosticText, diagnosticCodes, diagnostics);
            ^
