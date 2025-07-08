@@ -9,37 +9,27 @@ productaidonnagit-98836878:~/product.ai.Donna{main}$ npm run dev:server
 [nodemon] watching extensions: ts,json
 [nodemon] starting `ts-node src/server.ts`
 api/v1/telegram/webhook.ts loaded - contains handleTelegramUpdate function
-/home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:859
-    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
-           ^
-TSError: ⨯ Unable to compile TypeScript:
-src/types/database/KnowledgeBaseEntities.ts:4:1 - error TS6133: 'FirestoreCollections' is declared but its value is never read.
-
-4 import { FirestoreCollections } from './SboEntities'; // Assuming FirestoreCollections might be extended or live elsewhere
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    at createTSError (/home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:859:12)
-    at reportTSError (/home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:863:19)
-    at getOutput (/home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:1077:36)
-    at Object.compile (/home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:1433:41)
-    at Module.m._compile (/home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:1617:30)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
-    at Object.require.extensions.<computed> [as .ts] (/home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:1621:12)
-    at Module.load (node:internal/modules/cjs/loader:1288:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
-    at Module.require (node:internal/modules/cjs/loader:1311:19)
-    at require (node:internal/modules/helpers:179:18)
-    at Object.<anonymous> (/home/user/product.ai.Donna/src/database/repositories/KnowledgeBaseRepository.ts:5:1)
+VertexAiService: GCP_PROJECT_ID or GCP_REGION is not fully configured. Service might not work.
+Firebase Admin SDK initialized.
+Firebase Admin SDK initialized successfully via server.ts.
+Failed to initialize Firebase Admin SDK or TelegramAdapter in server.ts: Error: Telegram Bot Token is not configured!
+    at new TelegramAdapter (/home/user/product.ai.Donna/src/services/conversationalEngine/adapters/TelegramAdapter.ts:16:13)
+    at Object.<anonymous> (/home/user/product.ai.Donna/src/server.ts:23:21)
     at Module._compile (node:internal/modules/cjs/loader:1469:14)
     at Module.m._compile (/home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:1618:23)
     at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
     at Object.require.extensions.<computed> [as .ts] (/home/user/product.ai.Donna/node_modules/ts-node/src/index.ts:1621:12)
     at Module.load (node:internal/modules/cjs/loader:1288:32)
     at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
-    at Module.require (node:internal/modules/cjs/loader:1311:19)
-    at require (node:internal/modules/helpers:179:18)
-    at Object.<anonymous> (/home/user/product.ai.Donna/src/services/knowledgebase/KnowledgeBaseService.ts:3:1)
-    at Module._compile (node:internal/modules/cjs/loader:1469:14) {
-  diagnosticCodes: [ 6133 ]
-}
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:173:12)
+    at phase4 (/home/user/product.ai.Donna/node_modules/ts-node/src/bin.ts:649:14)
+    at bootstrap (/home/user/product.ai.Donna/node_modules/ts-node/src/bin.ts:95:10)
+    at main (/home/user/product.ai.Donna/node_modules/ts-node/src/bin.ts:55:10)
+    at Object.<anonymous> (/home/user/product.ai.Donna/node_modules/ts-node/src/bin.ts:800:3)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:173:12)
+    at node:internal/main/run_main_module:28:49
 [nodemon] app crashed - waiting for file changes before starting...
